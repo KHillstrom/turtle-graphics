@@ -2,23 +2,18 @@ package edu.macalester.generator;
 
 
 public class FibonacciGenerator {
-    private int cur;
+    public int a = 0;
+	public int b = 1;
+	public int oldA = a;
+	public int oldB = b;
     
-    public FibonacciGenerator(int start) {
-        cur = start - 1;  // make start the next number tested
+    public double next() {
+    	a = oldB;
+    	b = oldA + oldB;
+    	
+    	oldA = a;
+    	oldB = b;
+    	
+    	return b;
     }
-    
-    public int next(int start) {
-    	if (start == 0){
-    		int previousPrevious = start;
-    		return 0;
-    	}
-    	else if( start == 1){
-    		int previous = start;
-    		return 1;
-    	}
-    	else{
-    		return previous + previousPrevious;
-        }
-    }
-
+}

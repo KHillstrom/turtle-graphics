@@ -1,6 +1,8 @@
 package edu.macalester.cs124;
 
 import java.awt.Color;
+
+import edu.macalester.generator.FibonacciGenerator;
 import edu.macalester.generator.PrimeGenerator;
 
 import edu.macalester.turtle.Turtle;
@@ -10,11 +12,11 @@ public class Spiral extends TurtleProgram {
     public void run() {
         setTurtleSpeedFactor(0);
         spiral(Color.BLUE, 90);
-        spiral(Color.RED, 89);
+//        spiral(Color.RED, 89);
     }
     
     public void spiral(Color spiralColor, int degree){
-    	PrimeGenerator generator = new PrimeGenerator(2);
+    	FibonacciGenerator generator = new FibonacciGenerator();
     	
     	Turtle turtle = new Turtle(getWidth() / 2, getHeight() / 2);
     	add(turtle);

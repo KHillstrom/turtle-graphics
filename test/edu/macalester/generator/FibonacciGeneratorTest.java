@@ -8,22 +8,9 @@ public class FibonacciGeneratorTest {
 
     @Test
     public void generatorSkipsComposites() {
-        PrimeGenerator gen = new PrimeGenerator(8);
-        assertEquals(11, gen.next());
-        assertEquals(13, gen.next());
-    }
-
-    @Test
-    public void generatorIncludesStart() {
-        PrimeGenerator gen = new PrimeGenerator(2);
-        assertEquals(2, gen.next());
-        assertEquals(3, gen.next());
-        assertEquals(5, gen.next());
-    }
-
-    @Test
-    public void startsAt2() {
-        PrimeGenerator gen = new PrimeGenerator(-100);
-        assertEquals(2, gen.next());
+    	FibonacciGenerator gen = new FibonacciGenerator();
+        assertEquals(1, gen.next(), 0.0001);
+        assertEquals(1, gen.next(), 0.0001);
+        assertEquals(2, gen.next(), 0.0001);
     }
 }
